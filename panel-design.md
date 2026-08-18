@@ -14,7 +14,7 @@ implementation handoff.
 
 | # | Decision | Choice | Reason |
 |---|----------|--------|--------|
-| 1 | Language | Go 1.22+ | Static binary, easy single-file install, no runtime |
+| 1 | Language | Go 1.26+ | Static binary, easy single-file install, no runtime |
 | 2 | Binary model | Single static binary, `embed.FS` for UI assets | "SSH once, install once" promise |
 | 3 | Database (panel state) | SQLite via `modernc.org/sqlite` (pure Go, no CGO) | Matches user's "SQLite only" rule; no CGO = simple cross-compile |
 | 4 | Web server / reverse proxy | **Caddy** (not our own host-header routing) | Auto HTTPS, on-demand TLS, hot reload via local API |
